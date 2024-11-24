@@ -3,7 +3,7 @@ body {
 }
 
 
-h1, a {
+h1, a, div, h2, h3,p {
     display: flex;
     justify-content: center;
     color: #4B0082;
@@ -14,7 +14,14 @@ a {
     
 }
 
-
 a:hover {
     color:#8B0000  ;
+}
+
+input {
+    margin-bottom: 10px;
+}
+
+button {
+    margin-bottom: 10px;
 }
