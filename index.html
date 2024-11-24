@@ -1,0 +1,62 @@
+<!-- 1. Purpose
+The application will simulate basic banking operations, allowing users to manage their accounts, perform transactions, and check account details. It will demonstrate encapsulation for data security and abstraction to hide implementation details.
+
+2. Classes and Abstraction
+Base Class: Account
+This class defines the blueprint for all account types.
+
+Attributes:
+accountNumber
+accountHolderName
+balance
+
+Abstract Methods (Interface):
+deposit(amount)
+withdraw(amount)
+getBalance()
+
+Derived Classes
+SavingsAccount
+Adds interest (e.g., addInterest(rate)).
+Restricts withdrawal to avoid a zero balance.
+CheckingAccount
+Allows overdraft up to a certain limit.
+May have a transaction fee for withdrawals.
+
+3. Key Features (User Interactions)
+Core Operations
+Deposit Money
+User specifies account and amount.
+Adds the amount to the balance.
+Withdraw Money
+User specifies account and amount.
+Validates if the amount can be withdrawn (e.g., savings cannot go below zero, overdraft limit in checking).
+Transfer Money
+Moves money between two accounts, ensuring all validations are respected.
+View Account Details
+Displays account holder name, account number, and current balance.
+
+4. Abstraction in Action
+The user interface only calls high-level methods like deposit(), withdraw(), or transferFunds().
+The base class Account provides the abstract definition of these methods.
+The specific logic (e.g., overdraft rules or interest calculations) is implemented in the derived classes (SavingsAccount, CheckingAccount).
+
+5. Encapsulation
+Sensitive data (e.g., balance, accountNumber) is private or protected.
+Getter and setter methods control access and ensure validation (e.g., no withdrawals beyond balance or overdraft limits).
+
+6. Example Usage
+Workflow
+A user logs in and sees a menu:
+"1. Deposit"
+"2. Withdraw"
+"3. Transfer Funds"
+"4. View Account Details"
+The user selects an option, and the program calls the corresponding method on the appropriate account object.
+Encapsulated and abstracted logic handles the internal processes, ensuring data consistency and security.
+
+7. Optional Add-Ons
+Multiple Users: Extend it to support multiple users with unique accounts.
+Transaction History: Keep a log of deposits, withdrawals, and transfers.
+Interest Calculation: Automatically apply interest periodically for savings accounts.
+Would you like to begin with the structure or focus on implementing one specific feature first? -->
